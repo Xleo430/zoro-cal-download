@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zoroastrian Cultural Calendar — Download</title>
+  <link rel="icon" type="image/png" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -114,6 +115,32 @@
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
       50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+    }
+
+    /* ── APP ICON ── */
+    .app-icon-wrap {
+      position: relative;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.1s forwards;
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow:
+        0 8px 32px rgba(22,12,0,0.18),
+        0 0 0 1px rgba(139,94,0,0.15),
+        0 0 0 4px rgba(255,248,237,0.9),
+        0 0 0 5px rgba(139,94,0,0.12);
+      display: block;
+      animation: iconFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-6px); }
     }
 
     /* ── FLAME SVG ── */
@@ -782,6 +809,11 @@
 
   <!-- HERO -->
   <section class="hero">
+    <!-- App Icon -->
+    <div class="app-icon-wrap">
+      <img src="icon.png" alt="Zoroastrian Cultural Calendar app icon" class="app-icon" />
+    </div>
+
     <p class="hero-eyebrow">Sacred Flame Collection</p>
 
     <!-- Animated Flame -->
